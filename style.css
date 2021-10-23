@@ -1,0 +1,178 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Helvetica, Calibri;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(47, 51, 56);
+    justify-content: space-between;
+    padding: 0;
+    height: auto;
+    z-index: 5;
+    opacity: 1;
+}
+
+#nav-brand{
+    height: 60px;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+.nav-link{
+    color: #fff;
+    padding: 20px;
+    font-size: 1.2em;
+    margin: 0px 5px;
+    opacity: .6;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+    background-color: rgb(32, 34, 36);
+    opacity: 1;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    top: 100px;
+    position: relative;
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    font-size: 1em;
+    padding: 10px;
+}
+
+.input-submit{
+    cursor: pointer;
+    background-color: rgb(207, 170, 52);
+    border: 1px solid #fff;
+}
+
+.description-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+
+.description{
+    display: grid;
+    grid-template-areas: 
+        'Row1 Column1'
+        'Row1 Column2';
+    column-gap: 40px;
+}
+img{
+    height: 80px;
+    position: relative;
+    top: 50%;
+}
+.img-sign{
+    grid-area: Row1;
+}
+p{
+    grid-area: Column2;
+    top: -20%;
+    position: relative;
+    text-align: justify;
+}
+h2{
+    grid-area: Column1;
+    position: relative;
+    top: 25%;
+    font-size: 1.3rem;
+}
+
+.table-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-table{
+    border: 1px solid;
+    text-align: center;
+    margin: 30px;
+    
+}
+
+.table{
+    padding: 0;
+}
+.table-item{
+    padding: 10px;
+}
+
+button{
+    cursor: pointer;
+    font-size: 1em;
+    background-color: rgb(207, 170, 52);
+    border: none;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .content-container{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .description-container{
+        text-align: left;
+        width: 90vw;
+        height: auto;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    .table-table{
+            margin: 20px;
+        }
+    
+}
+
+@media (max-width: 429px) {
+    .content-container{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .description-container{
+        width: 120vw;
+        height: auto;
+        margin: 0;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    .description{
+        column-gap: 10px;
+    }
+    .table-table{
+            margin: 20px;
+            width: 120vw;
+        }
+    
+}
+
